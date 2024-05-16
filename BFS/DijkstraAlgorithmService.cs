@@ -1,4 +1,5 @@
-﻿namespace Interview.Samples.Application
+﻿
+namespace Interview.Samples.Application
 {
     public class DijkstraAlgorithmService
     {
@@ -45,7 +46,7 @@
             return nodeDistances;
         }
 
-        private int GetClosestUnvisitedNodeIndex(int[] nodeDistances, bool[] visitedNodes, int totalNodes)
+        private static int GetClosestUnvisitedNodeIndex(int[] nodeDistances, bool[] visitedNodes, int totalNodes)
         {
             int minNodeIndex = -1;
             int nodeDistance = MaxIndex;
