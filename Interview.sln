@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Samples.Tests", "Interview.Samples.Tests\Interview.Samples.Tests.csproj", "{6500521D-DE03-428D-8146-6236DE8DD553}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.Samples.Tests", "Interview.Samples.Tests\Interview.Samples.Tests.csproj", "{6500521D-DE03-428D-8146-6236DE8DD553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interview.Samples.BFS", "BFS\Interview.Samples.BFS.csproj", "{C5238AE0-30BA-4A08-9C50-1FFCF3036E3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.Samples.Application", "BFS\Interview.Samples.Application.csproj", "{C5238AE0-30BA-4A08-9C50-1FFCF3036E3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BFS\Interview.Samples.BFS.csproj" />
+    <ProjectReference Include="..\BFS\Interview.Samples.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
