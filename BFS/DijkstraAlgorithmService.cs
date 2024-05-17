@@ -1,5 +1,4 @@
-﻿
-namespace Interview.Samples.Application
+﻿namespace Interview.Samples.Application
 {
     public class DijkstraAlgorithmService
     {
