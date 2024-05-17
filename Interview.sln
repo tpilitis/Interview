@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.Samples.Tests", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interview.Samples.Application", "BFS\Interview.Samples.Application.csproj", "{C5238AE0-30BA-4A08-9C50-1FFCF3036E3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wordle", "Wordle\Wordle.csproj", "{9F77DC75-F877-44D8-9583-7B61F236C5DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C5238AE0-30BA-4A08-9C50-1FFCF3036E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5238AE0-30BA-4A08-9C50-1FFCF3036E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5238AE0-30BA-4A08-9C50-1FFCF3036E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F77DC75-F877-44D8-9583-7B61F236C5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F77DC75-F877-44D8-9583-7B61F236C5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F77DC75-F877-44D8-9583-7B61F236C5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F77DC75-F877-44D8-9583-7B61F236C5DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
