@@ -16,23 +16,27 @@ namespace Wordle
             }
 
             var resultWord = new StringBuilder();
-            var secretWorld = secretWord.ToArray();
+            var secretWorldChars = secretWord.ToCharArray();
+            var inputWordChars = inputWord.ToCharArray();
+
             for (int i = 0; i < inputWord.Length; i++)
             {
-                if (inputWord[i] == secretWorld[i])
+                if (inputWordChars[i] == secretWorldChars[i])
                 {
-                    // matching position
-                    resultWord.Append($"|{inputWord[i]}|");
+                    // matching position & letter
+                    resultWord.Append($"{inputWordChars[i]}");
                 }
                 else
                 {
-                    if (secretWord.Contains(inputWord[i]))
+                    if (secretWord.Contains(inputWordChars[i]))
                     {
-                        resultWord.Append($"<{inputWord[i]}>");
+                        // contains letter
+                        resultWord.Append($"<{inputWordChars[i]}>");
                     }
                     else
                     {
-                        resultWord.Append(inputWord[i]);
+                        // no match
+                        resultWord.Append("*");
                     }
                 }
             }
