@@ -1,95 +1,93 @@
 ﻿using System.Text;
-using System.Xml.XPath;
 
-namespace Interview.Samples.Application.Strings
+namespace Interview.Samples.Application.Strings;
+
+public static class PalindromService
 {
-    public static class PalindromService
+    public static int CalculateLongestPalindrome(string input)
     {
-        public static int CalculateLongestPalindrome(string input)
+        Dictionary<char, int> charCount = [];
+
+        foreach (char c in input)
         {
-            Dictionary<char, int> charCount = [];
-
-            foreach (char c in input)
+            if (charCount.ContainsKey(c))
             {
-                if (charCount.ContainsKey(c))
-                {
-                    charCount[c]++;
-                }
-                else
-                {
-                    charCount[c] = 1;
-                }
+                charCount[c]++;
             }
-
-            var maxLength = 0;
-            var anyOddFound = false;
-            foreach (int count in charCount.Values)
+            else
             {
-                if (count % 2 == 0)
-                {
-                    maxLength += count;
-                }
-                else
-                {
-                    maxLength += count - 1;
-                    anyOddFound = true;
-                }
+                charCount[c] = 1;
             }
-
-            if (anyOddFound)
-            {
-                maxLength++;
-            }
-
-            return maxLength;
         }
 
-        public static string GetPalindrome(string input)
+        var maxLength = 0;
+        var anyOddFound = false;
+        foreach (int count in charCount.Values)
         {
-            Dictionary<char, int> charCount = [];
-            StringBuilder leftPart = new StringBuilder();
-            StringBuilder rightPart = new StringBuilder();
-            char? middleChar = null;
-
-            foreach (char c in input)
+            if (count % 2 == 0)
             {
-                if (charCount.ContainsKey(c))
-                {
-                    charCount[c]++;
-                }
-                else
-                {
-                    charCount[c] = 1;
-                }
+                maxLength += count;
             }
-
-            foreach (var pair in charCount)
+            else
             {
-                var count = pair.Value;
-                var character = pair.Key;
-                if (count % 2 == 0)
-                {
-                    leftPart.Append(new string(character, count / 2));
-                    rightPart.Insert(0, new string(character, count / 2));
-                }
-                else
-                {
-                    leftPart.Append(new string(character, count / 2));
-                    rightPart.Insert(0, new string(character, count / 2));
-
-                    middleChar ??= pair.Key;
-                }
+                maxLength += count - 1;
+                anyOddFound = true;
             }
-
-            StringBuilder fullPalindrome = new();
-            fullPalindrome.Append(leftPart);
-            if (middleChar != null)
-            {
-                fullPalindrome.Append(middleChar);
-            }
-            fullPalindrome.Append(rightPart);
-
-            return fullPalindrome.ToString();
         }
+
+        if (anyOddFound)
+        {
+            maxLength++;
+        }
+
+        return maxLength;
+    }
+
+    public static string GetPalindrome(string input)
+    {
+        Dictionary<char, int> charCount = [];
+        StringBuilder leftPart = new StringBuilder();
+        StringBuilder rightPart = new StringBuilder();
+        char? middleChar = null;
+
+        foreach (char c in input)
+        {
+            if (charCount.ContainsKey(c))
+            {
+                charCount[c]++;
+            }
+            else
+            {
+                charCount[c] = 1;
+            }
+        }
+
+        foreach (var pair in charCount)
+        {
+            var count = pair.Value;
+            var character = pair.Key;
+            if (count % 2 == 0)
+            {
+                leftPart.Append(new string(character, count / 2));
+                rightPart.Insert(0, new string(character, count / 2));
+            }
+            else
+            {
+                leftPart.Append(new string(character, count / 2));
+                rightPart.Insert(0, new string(character, count / 2));
+
+                middleChar ??= pair.Key;
+            }
+        }
+
+        StringBuilder fullPalindrome = new();
+        fullPalindrome.Append(leftPart);
+        if (middleChar != null)
+        {
+            fullPalindrome.Append(middleChar);
+        }
+        fullPalindrome.Append(rightPart);
+
+        return fullPalindrome.ToString();
     }
 }

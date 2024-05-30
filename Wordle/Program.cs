@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace Wordle
 {
@@ -8,7 +7,7 @@ namespace Wordle
         static void Main(string[] args)
         {
             var maxAttempts = 6;
-            var secretWords = new[] { "apple", "crown", "dress", "sport" };
+            var secretWords = new[] { "apple", "crown", "dress", "sport", "coach" };
 
             var random = new Random();
             var wordIndex = random.Next(secretWords.Length - 1);
